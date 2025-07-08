@@ -1,13 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Contextual Korean Translator",
+  "name": "Smart Korean Translator",
   "version": "1.0",
-  "description": "Translates selected English text to Korean, providing cultural context and background information.",
+  "description": "Intelligent English-Korean translation with cultural context",
   "permissions": [
-    "storage",
     "activeTab",
+    "storage",
     "scripting",
     "contextMenus"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.openai.com/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -16,19 +20,16 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["toolbar.css"]
+      "css": ["content.css"]
     }
   ],
-  "options_page": "options.html",
   "action": {
-    "default_popup": "options.html"
+    "default_popup": "popup.html",
+    "default_title": "Smart Korean Translator"
   },
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
-  },
-  "host_permissions": [
-    "https://generativelanguage.googleapis.com/*"
-  ]
+  }
 }
