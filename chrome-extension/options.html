@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Translator Options</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    label { display:block; margin-top: 10px; }
+    textarea { width:100%; height:80px; }
+  </style>
+</head>
+<body>
+  <h1>Translator Settings</h1>
+  <label>
+    OpenAI API Key:
+    <input type="password" id="apiKey" style="width:100%;">
+  </label>
+  <label>
+    System Prompt:
+    <textarea id="systemPrompt"></textarea>
+  </label>
+  <button id="save">Save</button>
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>
